@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TurboScratch IDE - Build Scratch projects together</title>
+    <meta name="description" content="A Scratch mod with TurboWarp's fast compiler, addons and advanced settings, plus real-time collaboration: build one project together, live.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="theme-color" content="#0b7f76">
+    <style>
+        :root {
+            --bg: #f5f8fb;
+            --card: #ffffff;
+            --text: #13232b;
+            --muted: #4d6470;
+            --border: #dbe5ea;
+            --accent: #0e8379;
+            --accent-2: #4f46e5;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0d1418;
+                --card: #152027;
+                --text: #e8f1f4;
+                --muted: #9db2bc;
+                --border: #24343c;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.55;
+        }
+        a { color: var(--accent); }
+        @media (prefers-color-scheme: dark) { a { color: #4fd1c0; } }
+        .hero {
+            background-image: linear-gradient(100deg, #0b7f76 0%, #2272b8 55%, #4f46e5 100%);
+            color: #fff;
+            padding: 56px 16px 64px;
+            text-align: center;
+        }
+        .hero img.logo { width: min(340px, 86vw); height: auto; }
+        .hero p.tagline {
+            font-size: 1.25rem;
+            max-width: 640px;
+            margin: 18px auto 30px;
+            opacity: 0.95;
+        }
+        .buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .button {
+            display: inline-block;
+            padding: 14px 26px;
+            border-radius: 14px;
+            font-weight: bold;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: transform 0.08s, filter 0.15s;
+        }
+        .button:hover { filter: brightness(1.06); }
+        .button:active { transform: translateY(1px); }
+        .button.primary { background: #fff; color: #0b6b63; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); }
+        .button.secondary { background: rgba(255, 255, 255, 0.18); color: #fff; border: 1px solid rgba(255, 255, 255, 0.45); }
+        main { max-width: 960px; margin: 0 auto; padding: 40px 16px 24px; }
+        h2 { font-size: 1.5rem; margin: 32px 0 16px; }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+        }
+        .card h3 { margin: 6px 0 8px; font-size: 1.1rem; }
+        .card p { margin: 0; color: var(--muted); }
+        .emoji { font-size: 1.6rem; }
+        ol.steps { padding-left: 1.3rem; }
+        ol.steps li { margin-bottom: 8px; }
+        code {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1px 6px;
+            font-size: 0.92em;
+        }
+        .note {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 12px;
+            padding: 14px 16px;
+            color: var(--muted);
+        }
+        footer {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 16px 48px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <img class="logo" src="logo.svg" alt="TurboScratch IDE">
+        <p class="tagline">Build Scratch projects together, live. TurboWarp's speed, addons and advanced settings, plus real-time teamwork.</p>
+        <div class="buttons">
+            <a class="button primary" href="Turboscratch_IDE/editor.html">Open the editor</a>
+            <a class="button secondary" href="https://github.com/TurboScratch-IDE/Turboscratch_IDE">Source code</a>
+        </div>
+    </section>
+
+    <main>
+        <h2>What's inside</h2>
+        <div class="features">
+            <div class="card">
+                <div class="emoji">👥</div>
+                <h3>Real-time collaboration</h3>
+                <p>Share a room code and edit one project together. Blocks, sprites, costumes, sounds and variables sync as you work, with chat and "who's editing what".</p>
+            </div>
+            <div class="card">
+                <div class="emoji">⚡</div>
+                <h3>Fast like TurboWarp</h3>
+                <p>Projects are compiled to JavaScript, so they run much faster. Custom FPS, interpolation, infinite clones and other advanced settings are included.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🧩</div>
+                <h3>Addons &amp; extensions</h3>
+                <p>Dozens of editor addons (dark mode, block search, debugger and more) and TurboWarp's custom extensions.</p>
+            </div>
+        </div>
+
+        <h2>Work together</h2>
+        <ol class="steps">
+            <li>Open the editor and click <strong>Collaborate</strong> in the menu bar.</li>
+            <li>Enter your name and a room code, then <strong>Join room</strong>.</li>
+            <li>Click <strong>Copy invite link</strong> and send it to your team.</li>
+        </ol>
+        <p class="note">Collaboration needs a TurboScratch collaboration server. The website can't run one by itself.
+            To try it on your own computer, run <code>npm start</code> in the <code>collab-server</code> folder and use
+            <code>ws://localhost:8090</code> as the server. To work with friends over the internet, the server must run somewhere
+            everyone can reach, with a <code>wss://</code> address. Instructions are in the
+            <a href="https://github.com/TurboScratch-IDE/Turboscratch_IDE#readme">README</a>.</p>
+    </main>
+
+    <footer>
+        TurboScratch IDE is based on <a href="https://turbowarp.org/">TurboWarp</a> and
+        <a href="https://scratch.mit.edu/">Scratch</a> and is free software under the GPL-3.0 license.
+        Scratch is a project of the Scratch Foundation, available for free at
+        <a href="https://scratch.org/">https://scratch.org/</a>. TurboScratch IDE is not affiliated with or endorsed by the
+        Scratch Foundation or TurboWarp.
+    </footer>
+</body>
+</html>
