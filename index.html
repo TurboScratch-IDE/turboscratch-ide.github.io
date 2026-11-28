@@ -98,6 +98,27 @@
             padding: 14px 16px;
             color: var(--muted);
         }
+        .downloads {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .download {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 14px 18px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #fff;
+            background-image: linear-gradient(100deg, #0b7f76 0%, #2272b8 100%);
+            transition: transform 0.08s, filter 0.15s;
+        }
+        .download:hover { filter: brightness(1.08); }
+        .download:active { transform: translateY(1px); }
+        .download strong { font-size: 1.05rem; }
+        .download span { font-size: 0.85rem; opacity: 0.9; }
         footer {
             max-width: 960px;
             margin: 0 auto;
@@ -114,6 +135,7 @@
         <p class="tagline">Build Scratch projects together, live. TurboWarp's speed, addons and advanced settings, plus real-time teamwork.</p>
         <div class="buttons">
             <a class="button primary" href="Turboscratch_IDE/editor.html">Open the editor</a>
+            <a class="button secondary" href="#download">Download the app</a>
             <a class="button secondary" href="https://github.com/TurboScratch-IDE/Turboscratch_IDE">Source code</a>
         </div>
     </section>
@@ -157,6 +179,23 @@
             again later. To collaborate with friends on the same Wi-Fi without the internet, download the project and
             double-click <code>start-turboscratch.command</code> (Mac): it runs the editor and a server on your computer.
             More in the <a href="https://github.com/TurboScratch-IDE/Turboscratch_IDE#readme">README</a>.</p>
+
+        <h2 id="download">Download the app</h2>
+        <p>The same editor as a Windows or Mac app. Editing and saving work without internet; working
+            together and accounts still use the TurboScratch server.</p>
+        <div class="downloads">
+            <a class="download" href="https://github.com/TurboScratch-IDE/Turboscratch_IDE/releases/latest/download/TurboScratch-IDE-windows-setup.exe">
+                <strong>Windows</strong><span>Windows 10 or 11</span></a>
+            <a class="download" href="https://github.com/TurboScratch-IDE/Turboscratch_IDE/releases/latest/download/TurboScratch-IDE-mac-arm64.dmg">
+                <strong>Mac with Apple chip</strong><span>M1, M2, M3, M4…</span></a>
+            <a class="download" href="https://github.com/TurboScratch-IDE/Turboscratch_IDE/releases/latest/download/TurboScratch-IDE-mac-x64.dmg">
+                <strong>Mac with Intel chip</strong><span>older Macs</span></a>
+        </div>
+        <p class="note">Not sure which Mac you have? Click the Apple menu (top left) › <strong>About This Mac</strong>: it says
+            "Chip" (Apple) or "Processor" (Intel). The app isn't signed by Apple or Microsoft yet, so the first time:
+            on a Mac, open it, click <strong>Done</strong>, then go to System Settings › Privacy &amp; Security and
+            click <strong>Open Anyway</strong>. On Windows, click <strong>More info</strong> › <strong>Run anyway</strong>.
+            <a href="https://github.com/TurboScratch-IDE/Turboscratch_IDE#opening-it-the-first-time">Step-by-step help</a>.</p>
     </main>
 
     <footer>
